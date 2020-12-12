@@ -6,7 +6,7 @@ client.login('TOKEN_HERE');
 
 function main(){
     client.on('ready',readyDiscord);
-    client.on('message',gotMessage);
+    client.on('message',gotMessage)
 
 }
 
@@ -21,3 +21,4 @@ function readyDiscord(){
     console.log('ready');
 }
 main();
+
