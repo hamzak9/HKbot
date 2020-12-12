@@ -6,17 +6,18 @@ client.login('TOKEN_HERE');
 
 function main(){
     client.on('ready',readyDiscord);
-    client.on('ready',sendMsg);
+    client.on('message',gotMessage)
 
 }
-function sendMsg(){
-    client.channels.cache.get('471505554087346196').send('@oxyliary#0093 hop on');
-    client.channels.cache.get('471505554087346196').send('@oxyliary#0093 hop on');
-    client.channels.cache.get('471505554087346196').send('@oxyliary#0093 hop on');
 
+function gotMessage(msg){
+    if(msg.content === 'queue the crickets'){
+        client.channels.cache.get('471505554087346196').send('!play https://www.youtube.com/watch?v=17Jq0QqK4k0');
+
+    }
 }
+
 function readyDiscord(){
     console.log('ready');
 }
 main();
-
